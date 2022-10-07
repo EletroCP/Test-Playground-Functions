@@ -105,7 +105,6 @@ function encode(arr) {
   const reString = coded.toString().replace(/,/g, '');
   return reString;
 }
-
 const replaceNumbers = (string) => {
   const secondDecode = string.map((element) => {
     if (element === '3') return 'i';
