@@ -1,7 +1,6 @@
 const { splitSentence } = require('../../src/challenges');
 
-describe(`Verifica se o retorno da função "splitSentence" é igual ao array 
-  contendo todas as palavras da frase`, () => {
+describe('Verifica se o retorno da função "splitSentence"', () => {
 
     const phraseToSplit = 'frase de teste para verificar o output da função';
     const arrayLength = 9;
