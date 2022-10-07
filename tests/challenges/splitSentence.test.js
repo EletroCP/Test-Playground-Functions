@@ -1,6 +1,6 @@
 const { splitSentence } = require('../../src/challenges');
 
-describe('Verifica se o retorno da função "splitSentence"', () => {
+describe('Verifica o retorno da função "splitSentence"', () => {
 
     const phraseToSplit = 'frase de teste para verificar o output da função';
     const arrayLength = 9;
