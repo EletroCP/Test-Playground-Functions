@@ -105,7 +105,6 @@ function encode(arr) {
   const reString = coded.toString().replace(/,/g, '');
   return reString;
 }
-
 const replaceNumbers = (string) => {
   const secondDecode = string.map((element) => {
     if (element === '3') return 'i';
@@ -144,7 +143,7 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
+/*
 console.log(`A area de um tringulo de base: 3 e altura 5 deve ser 7.5: ${calcArea(3, 5)}`);
 
 console.log(`Deve retornar "cat1" ${catAndMouse(0, 1, 2)}`);
@@ -169,13 +168,14 @@ console.log(`Deve retornar "bug" ao passar "2": ${fizzBuzz([2])}`);
 
 console.log(`Deve retornar "50" se o time tiver 14 vitorias e 8 empates: ${footballPoints(14, 8)}`);
 
-console.log(`Deve terotnar 1 quando o maior numero aparece só uma vez: 
+console.log(`Deve terotnar 1 quando o maior numero aparece só uma vez:
 ${highestCount([1, 5, 6, 8, 7, 3, 50])}`);
 
-console.log(`Deve terotnar 5 quando o maior numero aparece 5 vezes: 
-${highestCount([50, 50, 6, 50, 7, 50, 50])}`);
+console.log(`Deve terotnar 5 quando o maior numero aparece 5 vezes:
+${highestCount([50, 50, 6, 50, 7, 50, 50])}`)
 
 console.log(
   'Deve retornar um array com as palavras ao passar a frase "Acho que é uma frase assim": ',
   splitSentence('Acho que é uma frase assim'),
 );
+ */
