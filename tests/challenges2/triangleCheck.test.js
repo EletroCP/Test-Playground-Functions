@@ -1,6 +1,6 @@
 const { triangleCheck } = require('../../src/challenges2');
 
-describe('Testa os retornos da função generatePhoneNumber', () => {
+describe('Testa os retornos da função triangleCheck', () => {
   it('Retorne false quando a medida de qualquer um dos lados seja maior que a soma das medidas dos outros dois', () => {
     expect(triangleCheck(16, 9, 2)).toBeFalsy();
     expect(triangleCheck(10, 3, 4)).toBeFalsy();
