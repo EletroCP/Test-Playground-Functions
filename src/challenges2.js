@@ -75,41 +75,41 @@ function generatePhoneNumber(numbers) {
   const telefone = createPhoneNumber(numbers);
   return telefone;
 }
-/*
-// Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
 
-  if(lineA < (lineB + lineC) && Math.abs(lineC - lineB) < lineA){
-    return true
-  }  else if(lineB < (lineA + lineC) && Math.abs(lineC - lineA) < lineB){
-    return true
-  } else if(lineC < (lineB + lineA) && Math.abs(lineB - lineA) < lineC){
-    return true
-  }else {
-    return false
+// Desafio 12
+const checkLine = (lineToCheck, otherLine1, otherLine2) => {
+  if (lineToCheck < (otherLine1 + otherLine2) && Math.abs(otherLine2 - otherLine1) < lineToCheck) {
+    return true;
   }
+  return false;
+};
+
+function triangleCheck(lineA, lineB, lineC) {
+  const checkLineA = checkLine(lineA, lineB, lineC);
+  const checkLineB = checkLine(lineB, lineA, lineC);
+  const checkLineC = checkLine(lineC, lineA, lineB);
+  if (checkLineA && checkLineB && checkLineC) return true;
+  return false;
 }
 
 // Desafio 13
 function hydrate(quantidade) {
-  //material para apoio: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
-  //elimina o text
-  let numbers = quantidade.replace(/[^0-9]/g, '')
-  let valores = numbers.split("")
-  let soma = 0
-  for(let index = 0; index < valores.length; index+=1){
-    soma = soma + parseInt(valores[index])
+  // material para apoio: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+  // elimina o text
+  let numbers = quantidade.replace(/[^0-9]/g, '');
+  let valores = numbers.split('');
+  let soma = 0;
+  for (let index = 0; index < valores.length; index += 1) {
+    soma += parseInt(valores[index], 10);
   }
-  if(soma === 1){
-    return soma + " copo de água"
-  } else {
-    return soma + " copos de água"
+  if (soma === 1) {
+    return `${soma} copo de água`;
   }
+  return `${soma} copos de água`;
 }
-*/
 module.exports = {
   generatePhoneNumber,
   techList,
-  // hydrate,
-  // triangleCheck,
+  hydrate,
+  triangleCheck,
 };
